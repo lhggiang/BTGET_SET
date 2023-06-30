@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name) {
+                this._name = name;
+            }
+            get name() {
+                return this._name;
+            }
+            set name(newValue) {
+                this._name = newValue;
+            }
+            walk(distance) {
+                console.log(this._name + " go " + distance)
+            }
+        }
+        class Programmer extends Person {
+            constructor(language) {
+                this._language = language;
+            }
+            get language() {
+                return this._language;
+            }
+            set language(newValue) {
+                this._language = newValue;
+            }
+            writeCode(lang) {
+                console.log(this._language + " study " + lang)
+            }
+        }
+        const per = new Person("giang");
+    </script>
+</body>
+
+</html>
